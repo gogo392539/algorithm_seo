@@ -1,0 +1,4 @@
+﻿  algorithmstack4.cpp
+c:\users\user\documents\git\algorithm_seo\algorithm\algorithm_stack4\algorithmstack4.cpp(25): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  algorithm_stack4.vcxproj -> C:\Users\user\Documents\git\algorithm_seo\algorithm\Debug\algorithm_stack4.exe
+  algorithm_stack4.vcxproj -> C:\Users\user\Documents\git\algorithm_seo\algorithm\Debug\algorithm_stack4.pdb (Partial PDB)
