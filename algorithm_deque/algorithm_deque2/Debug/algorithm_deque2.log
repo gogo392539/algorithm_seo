@@ -1,4 +1,4 @@
 ﻿  deque2.cpp
-c:\users\seo\documents\git\algorithm_deque\algorithm_deque2\deque2.cpp(36): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\seo\documents\git\algorithm_deque\algorithm_deque2\deque2.cpp(36): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
   algorithm_deque2.vcxproj -> C:\Users\Seo\Documents\git\algorithm_deque\Debug\algorithm_deque2.exe
   algorithm_deque2.vcxproj -> C:\Users\Seo\Documents\git\algorithm_deque\Debug\algorithm_deque2.pdb (Full PDB)

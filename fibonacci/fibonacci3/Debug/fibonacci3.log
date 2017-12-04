@@ -1,0 +1,4 @@
+﻿  fibonacci3.cpp
+c:\users\seo\documents\git\fibonacci\fibonacci3\fibonacci3.cpp(14): warning C4101: 'result' :참조되지 않은 지역 변수입니다.
+  fibonacci3.vcxproj -> C:\Users\Seo\Documents\git\fibonacci\Debug\fibonacci3.exe
+  fibonacci3.vcxproj -> C:\Users\Seo\Documents\git\fibonacci\Debug\fibonacci3.pdb (Full PDB)

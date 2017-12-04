@@ -1,5 +1,6 @@
 #include <iostream>
 #include <deque>
+#include <stack>
 
 using namespace std;
 
@@ -52,6 +53,8 @@ int main(void)
 }
 
 void DFSFunc(int s) {
+	/*
+	//순회 방식
 	DFSisVisits[s - 1] = true;
 	
 	for (int i = 1; i <= vCount; i++) {
@@ -59,8 +62,31 @@ void DFSFunc(int s) {
 			cout << i << " ";
 			DFSFunc(i);
 		}
-	}
+	}*/
 
+	//스택 방식
+	stack<int> st;
+	DFSisVisits[s - 1] = true;
+	st.push(s);
+	int ss;
+	bool flag;
+
+	while (!st.empty()) {
+		ss = st.top();
+		flag = false;
+		for (int i = 1; i <= vCount; i++) {
+			if (adjacencyMatrix[ss - 1][i-1] == 1 && !DFSisVisits[i-1]) {
+				cout << i << " ";
+				st.push(i);
+				DFSisVisits[i - 1] = true;
+				flag = true;
+				break;
+			}
+		}
+		if (!flag) {
+			st.pop();
+		}
+	}
 }
 
 void BFSFunc(int s) {
