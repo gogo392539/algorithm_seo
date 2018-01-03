@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\BinomialCoefficient1\bc2.cpp">
+    <ClCompile Include="bc2.cpp">
       <Filter>리소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
