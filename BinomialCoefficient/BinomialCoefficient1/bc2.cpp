@@ -1,41 +1,42 @@
 #include <iostream> 
+#include <string.h>
 
 using namespace std;
 
-unsigned long long int Factorial(double nNaturalNumber, double nInteger);
+long long int Factorial(int nN, int nK);
+
+int arBC[1001][1001];
+
 
 int main(void) {
-	int nNaturalNumber = 0;
-	int nInteger = 0;
-	unsigned long long int nResult = 0;
 
-	cin >> nNaturalNumber;
-	cin >> nInteger;
+	memset(arBC, -1, sizeof(arBC));
 
-	if (nNaturalNumber < nInteger) {
-		cout << 0 << endl;
-	}
-	else if (nInteger < 0) {
-		cout << 0 << endl;
-	}
-	else {
-		nResult = Factorial(nNaturalNumber, nInteger);
-	}
+	arBC[0][0] = 1;
+	arBC[1][0] = 1;
+	arBC[1][1] = 1;
 
-	cout << nResult << endl;
+	int nN = 0;
+	int nK = 0;
+
+	cin >> nN >> nK;
+
+	cout << Factorial(nN, nK) << endl;
 
 	return 0;
 }
 
-unsigned long long int Factorial(double nNaturalNumber, double nInteger) {
-	double nResult = 1;
-	unsigned long long int nResult1 = 0;
-	while (nInteger > 0) {
-		nResult *= ((nNaturalNumber--) / (nInteger--));
+long long int Factorial(int nN, int nK) {
+
+	if (arBC[nN][nK] != -1) {
+		return arBC[nN][nK];
 	}
 
-	nResult1 = (unsigned long long int)nResult % 10007;
+	if (nK == 0 || nK == nN) {
+		return 1;
+	}
 
-	return nResult1;
+	arBC[nN][nK] = (Factorial(nN - 1, nK - 1) + Factorial(nN - 1, nK)) % 10007;
+
+	return arBC[nN][nK];
 }
-
