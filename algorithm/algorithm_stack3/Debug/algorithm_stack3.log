@@ -1,3 +1,6 @@
-﻿  algorithmstack3.cpp
-  algorithm_stack3.vcxproj -> C:\Users\user\Documents\git\algorithm_seo\algorithm\Debug\algorithm_stack3.exe
-  algorithm_stack3.vcxproj -> C:\Users\user\Documents\git\algorithm_seo\algorithm\Debug\algorithm_stack3.pdb (Partial PDB)
+﻿  stdafx.cpp
+D:\seo\5 my 소스코드\mySourceCode\gogo392539\algorithm_seo\algorithm\algorithm_stack3\stdafx.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\seo\5 my 소스코드\mySourceCode\gogo392539\algorithm_seo\algorithm\algorithm_stack3\stdafx.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+D:\seo\5 my 소스코드\mySourceCode\gogo392539\algorithm_seo\algorithm\algorithm_stack3\targetver.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  algorithmstack3.cpp
+  algorithm_stack3.vcxproj -> D:\seo\5 my 소스코드\mySourceCode\gogo392539\algorithm_seo\algorithm\Debug\algorithm_stack3.exe
