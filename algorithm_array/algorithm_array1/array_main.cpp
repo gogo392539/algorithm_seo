@@ -4,10 +4,6 @@ using namespace std;
 
 int main(void)
 {
-
-	cout << "hellow" << endl;
-	cout << "hellow" << endl;
-	cout << "hellow" << endl;
 	
 
 

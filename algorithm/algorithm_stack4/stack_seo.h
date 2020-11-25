@@ -44,7 +44,7 @@ void s_stack<T>::push(T value) {
 template <typename T>
 T s_stack<T>::pop() {
 	if (empty()) {
-		return NULL;
+		return nullptr;
 	}
 	else {
 		S_Node* temp = topNode;
@@ -74,7 +74,7 @@ int s_stack<T>::empty() {
 template <typename T>
 T s_stack<T>::top() {
 	if (topNode == NULL) {
-		return NULL;
+		return nullptr;
 	}
 	else {
 		return topNode->value;
