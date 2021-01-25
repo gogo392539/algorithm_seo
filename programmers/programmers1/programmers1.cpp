@@ -1,7 +1,7 @@
 ﻿// programmers1.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
 //
 
-// 문제 : 스킬트리
+// 문제 : 스킬트리(LEVEL 2)
 
 #include "pch.h"
 #include <iostream>
