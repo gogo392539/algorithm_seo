@@ -12,6 +12,8 @@ int fn_Brute_Force_03();	//1476 : 날짜계산
 int fn_Brute_Force_04();	//1107 : 리모컨
 int fn_Brute_Force_05();	//14500 : 테트로미노
 int fn_Calc(vector<vector<int>>& vMap, vector<string>& vBlock, int nX, int nY);
+vector<string>& fn_Mirror(vector<string>& vBlock);
+vector<string>& fn_Rotate(vector<string>& vBlock);
 
 
 int main()
@@ -45,7 +47,7 @@ int fn_Brute_Force_05()
 
 	int nN = 0;
 	int nM = 0;
-
+	int nMax = 0;
 	cin >> nN >> nM;
 
 	vector<vector<int>> vMap(nN, vector<int>(nM));
@@ -56,21 +58,27 @@ int fn_Brute_Force_05()
 		}
 	}
 
-	cout << "\n";
 
-	for (auto &block : vBlocks) {
-		for (int i = 0; i < nN; i++) {
-			for (int j = 0; j < nM; j++) {
-				if (block[i][j] == 0) {
-					continue;
+	for (int i = 0; i < nN; i++) {
+		for (int j = 0; j < nM; j++) {
+			for (auto& block : vBlocks) {
+				vector<string> vTmp(block);
+				for (int mir = 0; mir < 2; mir++) {
+					for (int rot = 0; rot < 4; rot++) {
+						int nCur = fn_Calc(vMap, vTmp, i, j);
+						if (nCur != -1 && nMax < nCur) {
+							nMax = nCur;
+						}
+
+						block = fn_Rotate(block);
+					}
+					block = fn_Mirror(block);
 				}
-				//cout<< block[i][j] <<" ";
 			}
-			cout << "\n";
 		}
-		cout << "\n";
-		cout << "\n";
 	}
+
+	cout << nMax << "\n";
 
 
 
@@ -102,6 +110,36 @@ int fn_Calc(vector<vector<int>>& vMap, vector<string>& vBlock, int nX, int nY)
 	}
 
 	return nSum;
+}
+
+vector<string>& fn_Mirror(vector<string>& vBlock)
+{
+	//좌우 대칭
+	vector<string> vTmp(vBlock.size());
+
+	for (int i = 0; i < vBlock.size(); i++) {
+		string strTmp(vBlock[i]);
+
+		reverse(strTmp.begin(), strTmp.end());
+		vTmp[i] = strTmp;
+	}
+
+	return vTmp;
+}
+
+vector<string>& fn_Rotate(vector<string>& vBlock)
+{
+	//90도 회전
+	vector<string> vTmp(vBlock[0].size());
+
+	for (int i = 0; i < vBlock[0].size(); i++) {
+		for (int j = (int)vBlock.size() - 1; j >= 0; j--) {
+			vTmp[i] += vBlock[j][i];
+		}
+	}
+
+
+	return vTmp;
 }
 
 
