@@ -56,6 +56,22 @@ int fn_Brute_Force_05()
 		}
 	}
 
+	cout << "\n";
+
+	for (auto &block : vBlocks) {
+		for (int i = 0; i < nN; i++) {
+			for (int j = 0; j < nM; j++) {
+				if (block[i][j] == 0) {
+					continue;
+				}
+				//cout<< block[i][j] <<" ";
+			}
+			cout << "\n";
+		}
+		cout << "\n";
+		cout << "\n";
+	}
+
 
 
 	return 0;
@@ -67,9 +83,21 @@ int fn_Calc(vector<vector<int>>& vMap, vector<string>& vBlock, int nX, int nY)
 	int nRow = vMap.size();
 	int nCol = vMap[0].size();
 
-	for (int i = 0; i < nRow; i++) {
-		for (int j = 0; j < nCol; j++) {
-			//if(vBlock)
+	for (int i = 0; i < vBlock.size(); i++) {
+		for (int j = 0; j < vBlock[0].size(); j++) {
+			if (vBlock[i][j] == 0) {
+				continue;
+			}
+
+			int nTmpX = nX + i;
+			int nTmpY = nY + j;
+			if (nTmpX >= 0 && nTmpX < nRow && nTmpY >= 0 && nTmpX < nCol) {
+				nSum += vMap[nTmpX][nTmpY];
+			}
+			else {
+				return -1;
+			}
+
 		}
 	}
 
