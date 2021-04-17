@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Practice_01_Math", "Practic
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Practice_02_brute_force", "Practice_02_brute_force\Practice_02_brute_force.vcxproj", "{1A5DAD62-C931-47CC-A4FD-CCDBA7101CB0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project03_recursive", "Project03_recursive\Project03_recursive.vcxproj", "{C2184591-4277-477E-950A-1460B92F1524}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{1A5DAD62-C931-47CC-A4FD-CCDBA7101CB0}.Release|x64.Build.0 = Release|x64
 		{1A5DAD62-C931-47CC-A4FD-CCDBA7101CB0}.Release|x86.ActiveCfg = Release|Win32
 		{1A5DAD62-C931-47CC-A4FD-CCDBA7101CB0}.Release|x86.Build.0 = Release|Win32
+		{C2184591-4277-477E-950A-1460B92F1524}.Debug|x64.ActiveCfg = Debug|x64
+		{C2184591-4277-477E-950A-1460B92F1524}.Debug|x64.Build.0 = Debug|x64
+		{C2184591-4277-477E-950A-1460B92F1524}.Debug|x86.ActiveCfg = Debug|Win32
+		{C2184591-4277-477E-950A-1460B92F1524}.Debug|x86.Build.0 = Debug|Win32
+		{C2184591-4277-477E-950A-1460B92F1524}.Release|x64.ActiveCfg = Release|x64
+		{C2184591-4277-477E-950A-1460B92F1524}.Release|x64.Build.0 = Release|x64
+		{C2184591-4277-477E-950A-1460B92F1524}.Release|x86.ActiveCfg = Release|Win32
+		{C2184591-4277-477E-950A-1460B92F1524}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
