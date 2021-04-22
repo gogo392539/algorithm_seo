@@ -9,10 +9,19 @@
 
 using namespace std;
 
+//1248 : 맞춰봐
+int nCorrect = 0;
+bool g_correctCheck[21] = { 0, };
+vector<vector<int>> g_vCorrectS(10, vector<int>(10));
+vector<int> g_vCorrect(10);
+int fn_correct();
+bool fn_correct_recursive(int nIdx);
+bool fn_correct_check(int nIdx);
+
 //2529 : 부등호
-bool barCheck[10] = { 0, };
-char szSign[20] = { 0, };
-vector<string> vResult;
+bool g_barCheck[10] = { 0, };
+char g_szSign[20] = { 0, };
+vector<string> g_vResult;
 int fn_sign();
 void fn_sign_recursive(int nLen, int nIdx, string strNum);
 bool fn_sign_check(string strNum, int nLen);
@@ -53,9 +62,56 @@ int main()
 	//fn_resign();
 	//fn_start_and_link();
 	//fn_link_and_start();
-	fn_sign();
+	//n_sign();
+	fn_correct();
 
 	return 0;
+}
+
+int fn_correct()
+{
+	int nCount = 0;
+	string strS;
+	cin >> nCorrect >> strS;
+
+	for (int i = 0; i < nCorrect; i++) {
+		for (int j = i; j < nCorrect; j++) {
+			if (strS[i] == '0') {
+				g_vCorrectS[i][j] = 0;
+			}
+			else if (strS[i] == '+') {
+				g_vCorrectS[i][j] = 1;
+			}
+			else  {
+				g_vCorrectS[i][j] = -1;
+			}
+		}
+
+		nCount++;
+	}
+
+	fn_correct_recursive(0);
+
+	for (int i = 0; i < nCorrect; i++) {
+		cout << g_vCorrect[i] << " ";
+	}
+	cout << "\n";
+
+
+	return 0;
+}
+
+bool fn_correct_recursive(int nIdx)
+{
+
+	return true;
+}
+
+bool fn_correct_check(int nIdx)
+{
+
+
+	return true;
 }
 
 int fn_sign()
@@ -65,15 +121,13 @@ int fn_sign()
 
 	cin >> nN;
 
-	vector<char> vSign(nN);
-
 	for (int i = 0; i < nN; i++) {
-		cin >> vSign[i];
+		cin >> g_szSign[i];
 	}
 
 	fn_sign_recursive(nN, 0, strNum);
 	
-	auto result = minmax_element(vResult.begin(), vResult.end());
+	auto result = minmax_element(g_vResult.begin(), g_vResult.end());
 	cout << *result.second << "\n";
 	cout << *result.first << "\n";
 
@@ -83,22 +137,20 @@ int fn_sign()
 void fn_sign_recursive(int nLen, int nIdx, string strNum)
 {
 	if (nIdx == nLen + 1) {
-		if (fn_sign_check(strNum, nLen)) {
-			vResult.push_back(strNum);
+		if(fn_sign_check(strNum, nLen)) {
+			g_vResult.push_back(strNum);
 		}
 		return;
 	}
 
 	for (int i = 0; i <= 9; i++) {
-		if (barCheck[i]) {
+		if (g_barCheck[i]) {
 			continue;
 		}
 
-		barCheck[i] = true;
-
+		g_barCheck[i] = true;
 		fn_sign_recursive(nLen, nIdx + 1, strNum + to_string(i));
-
-		barCheck[i] = false;
+		g_barCheck[i] = false;
 	}
 
 }
@@ -106,15 +158,16 @@ void fn_sign_recursive(int nLen, int nIdx, string strNum)
 bool fn_sign_check(string strNum, int nLen)
 {
 	for (int i = 0; i < nLen; i++) {
-		if (szSign[i] == '<') {
+		if (g_szSign[i] == '<') {
 			if (strNum[i] > strNum[i + 1]) {
 				return false;
 			}
 		}
-		else if (szSign[i] == '>') {
+		else if (g_szSign[i] == '>') {
 			if (strNum[i] < strNum[i + 1]) {
 				return false;
 			}
+
 		}
 	}
 
