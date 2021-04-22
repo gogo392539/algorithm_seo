@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project03_recursive", "Proj
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Practice04_bruteforce_M_N", "Practice04_bruteforce_M_N\Practice04_bruteforce_M_N.vcxproj", "{DB223959-7EC9-4C2D-8B2B-427689BABCBF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Practice05_permutation", "Practice05_permutation\Practice05_permutation.vcxproj", "{DDC10B24-1AC0-47FA-800B-1130E25118D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{DB223959-7EC9-4C2D-8B2B-427689BABCBF}.Release|x64.Build.0 = Release|x64
 		{DB223959-7EC9-4C2D-8B2B-427689BABCBF}.Release|x86.ActiveCfg = Release|Win32
 		{DB223959-7EC9-4C2D-8B2B-427689BABCBF}.Release|x86.Build.0 = Release|Win32
+		{DDC10B24-1AC0-47FA-800B-1130E25118D6}.Debug|x64.ActiveCfg = Debug|x64
+		{DDC10B24-1AC0-47FA-800B-1130E25118D6}.Debug|x64.Build.0 = Debug|x64
+		{DDC10B24-1AC0-47FA-800B-1130E25118D6}.Debug|x86.ActiveCfg = Debug|Win32
+		{DDC10B24-1AC0-47FA-800B-1130E25118D6}.Debug|x86.Build.0 = Debug|Win32
+		{DDC10B24-1AC0-47FA-800B-1130E25118D6}.Release|x64.ActiveCfg = Release|x64
+		{DDC10B24-1AC0-47FA-800B-1130E25118D6}.Release|x64.Build.0 = Release|x64
+		{DDC10B24-1AC0-47FA-800B-1130E25118D6}.Release|x86.ActiveCfg = Release|Win32
+		{DDC10B24-1AC0-47FA-800B-1130E25118D6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
